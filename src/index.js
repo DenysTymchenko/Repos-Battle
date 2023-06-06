@@ -6,9 +6,9 @@ import {
 } from "react-router-dom";
 import Root from './routes/root';
 import ErrorPage from './routes/error-page';
+import Home from './pages/Home';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Main from './components/Main';
 
 const router = createBrowserRouter([
   {
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Main />,
+        element: <Home />,
       }
     ]
   },
