@@ -7,6 +7,7 @@ import {
 import Root from './routes/root';
 import ErrorPage from './routes/error-page';
 import Home from './pages/Home';
+import Popular from './pages/Popular';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home />,
+      },
+      {
+        path: '/popular',
+        element: <Popular />,
       }
     ]
   },
