@@ -2,7 +2,7 @@ import Repository from './Repository';
 
 export default function Repositories({ repos }) {
   return (
-    <div>
+    <div className='flex justify-center flex-wrap gap-4	p-4'>
       {repos.map(repo => (
         <Repository
           key={repo.id}
