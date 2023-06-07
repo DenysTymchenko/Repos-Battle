@@ -5,19 +5,19 @@ import { faGithub, faTelegram, faLinkedin } from "@fortawesome/free-brands-svg-i
 export default function Footer() {
   const footerLinks = [
     {
-      link: '',
+      link: 'https://github.com/DenysTymchenko',
       icon: faGithub,
     },
     {
-      link: '',
+      link: 'https://t.me/DenysTymchenko',
       icon: faTelegram,
     },
     {
-      link: '',
+      link: 'mailto:tymchenko.denys@gamil.com',
       icon: faEnvelope,
     },
     {
-      link: '',
+      link: 'https://www.linkedin.com/in/denys-tymchenko-0031b1251/',
       icon: faLinkedin,
     },
   ]

@@ -4,18 +4,18 @@ export default function Header() {
   const headerLinks = [
     {
       title: 'Home',
-      component: '',
+      path: '/',
     },
     {
       title: 'Popular',
-      component: '',
+      path: '/popular',
     },
     {
       title: 'Battle',
-      component: '',
+      path: '/',
     },
   ];
-  
+
   return (
     <header className="bg-custom-dark-light p-3 text-lg">
       <nav>
@@ -25,7 +25,7 @@ export default function Header() {
               key={headerLink.title}
               className="inline-block hover:text-custom-header-link-hover"
             >
-              <Link to={headerLink.component}>{headerLink.title}</Link>
+              <Link to={headerLink.path}>{headerLink.title}</Link>
             </li>
           )}
         </ul>
