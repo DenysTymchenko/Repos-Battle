@@ -6,11 +6,9 @@ export default function Repositories({ repos }) {
       {repos.map(repo => (
         <Repository
           key={repo.id}
-          repoName={repo.name}
-          description={repo.description}
+          repo={repo}
+          owner={repo.owner}
           stars={repo.stargazers_count}
-          author={repo.owner.login}
-          avatarLink={repo.owner.avatar_url}
         />
       ))}
     </div>
