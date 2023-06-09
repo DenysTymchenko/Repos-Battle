@@ -17,7 +17,7 @@ export default function Header() {
   ];
 
   return (
-    <header className='bg-custom-dark-light p-3 text-lg'>
+    <header className='flex justify-center bg-custom-dark-light p-3 text-lg'>
       <nav>
         <ul className='flex gap-10'>
           {headerLinks.map(headerLink =>
