@@ -1,4 +1,4 @@
-export default function LanguageSelect({ isLoaded, selectedLanguage, setSelectedLanguage }) {
+export default function LanguageSelect({ selectedLanguage, setSelectedLanguage }) {
   const programmingLanguages = [
     'All',
     'JavaScript',
@@ -12,7 +12,6 @@ export default function LanguageSelect({ isLoaded, selectedLanguage, setSelected
         name='language'
         className='bg-custom-dark-light rounded p-3 border border-solid border-r-8 border-custom-dark-light'
         value={selectedLanguage}
-        disabled={!isLoaded}
         onChange={(e) => setSelectedLanguage(e.target.value)}
       >
         {programmingLanguages.map((programmingLanguage) => (
