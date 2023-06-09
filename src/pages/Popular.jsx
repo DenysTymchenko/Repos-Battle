@@ -44,7 +44,7 @@ export default function Popular() {
         (
           <div className='h-screen flex justify-center items-center'>
             <Grid
-              color='#4fa94d'
+              color='#30363d'
               ariaLabel='grid-loading'
               radius='12.5'
               wrapperStyle={{}}
