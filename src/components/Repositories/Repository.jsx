@@ -8,7 +8,7 @@ export default function Repository({ repo, owner, stars }) {
   const { login, avatar_url } = owner;
 
   return (
-    <div className='w-96 rounded p-4 border-2  border-custom-repo-border-color'>
+    <div className='w-96 rounded overflow-auto p-4 border-2  border-custom-repo-border-color'>
       <div className='flex gap-2 items-center mb-4'>
         <img
           src={avatar_url}
