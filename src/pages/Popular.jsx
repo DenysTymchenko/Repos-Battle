@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import LanguageSelect from '../components/LanguageSelect';
 import Repositories from '../components/Repositories/Repositories';
 import { getPopularRepos } from '../api';
+import { Grid } from 'react-loader-spinner';
 
 export default function Popular() {
   const location = useLocation(); // will be used for work with url
@@ -29,15 +30,30 @@ export default function Popular() {
 
   return (
     <main className='min-h-screen p-10'>
-      {isLoaded && (
-        <>
-          <LanguageSelect
-            selectedLanguage={selectedLanguage}
-            setSelectedLanguage={setSelectedLanguage}
-          />
-          <Repositories repos={repos} />
-        </>
-      )}
+      {isLoaded ?
+        (
+          <>
+            <LanguageSelect
+              selectedLanguage={selectedLanguage}
+              setSelectedLanguage={setSelectedLanguage}
+            />
+            <Repositories repos={repos} />
+          </>
+        )
+        :
+        (
+          <div className='h-screen flex justify-center items-center'>
+            <Grid
+              color='#4fa94d'
+              ariaLabel='grid-loading'
+              radius='12.5'
+              wrapperStyle={{}}
+              wrapperClass=''
+              visible={true}
+            />
+          </div>
+        )
+      }
     </main>
   );
 }
